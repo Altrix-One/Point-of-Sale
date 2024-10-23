@@ -173,7 +173,7 @@ export const useAuthStore = defineStore("auth", {
           // } else {
           var currentDomain = window.location.origin;
           this.alert.createAlert("Message", message, "OK").then(() => {
-            window.location.href = currentDomain + "/login/";
+            window.location.href = currentDomain + "/app/";
           });
           // }
         })
@@ -193,7 +193,7 @@ export const useAuthStore = defineStore("auth", {
             this.alert
               .createAlert("Message", "Please close previous POS Entry", "OK")
               .then(() => {
-                window.location.href = currentDomain;
+                window.location.href = currentDomain + "/app/";
               });
           }
         })
