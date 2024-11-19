@@ -150,7 +150,11 @@ export const usetoggleRecentOrder = defineStore("recentOrders", {
       if (recentOrder.name === this.invoiceNumber) return;
       this.orderType = recentOrder.order_type;
       this.netTotal = recentOrder.net_total;
-      this.grandTotal = recentOrder.rounded_total;
+      if (this.invoiceData.disableRoundedTotal === 1) {
+        this.grandTotal = recentOrder.grand_total;
+      } else {
+        this.grandTotal = recentOrder.rounded_total;
+      }
       this.invoiceNumber = recentOrder.name;
       this.selectedOrder = recentOrder;
       this.selectedTable = recentOrder.restaurant_table;

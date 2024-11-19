@@ -37,6 +37,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
     tableInvoiceNo: null,
     tableAttention: null,
     modeOfPaymentList: null,
+    disableRoundedTotal:null,
     showUpdateButtton: true,
     isChecked: false,
     isPrinting: false,
@@ -73,6 +74,7 @@ export const useInvoiceDataStore = defineStore("invoiceData", {
           this.print_type = this.invoiceDetails.print_type;
           this.printer = this.invoiceDetails.printer;
           this.paidLimit = this.invoiceDetails.paid_limit;
+          this.disableRoundedTotal =this.invoiceDetails.disable_rounded_total
           if (this.qz_host) {
             loadQzPrinter(this.qz_host);
           }
