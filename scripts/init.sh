@@ -43,11 +43,11 @@ bench --site dev.altrixone set-config developer_mode 1
 bench --site dev.altrixone clear-cache
 bench use dev.altrixone
 bench get-app https://github.com/epiusegs/erpnext --branch dev_altrix_one_develop
-bench get-app ury https://github.com/ury-erp/ury.git
+bench get-app ury https://github.com/ury-erp/ury.git --branch Aggregator
 bench --site dev.altrixone install-app erpnext
-bench --site dev.altrixone install-app ury
+bench --site dev.altrixone install-app ury 
 bench get-app https://github.com/NagariaHussain/doppio
-bench get-app ury_pos https://github.com/ury-erp/pos.git
+bench get-app ury_pos https://github.com/ury-erp/pos.git --branch Aggregator
 bench --site dev.altrixone install-app ury_pos
-bench get-app ury_mosaic https://github.com/ury-erp/mosaic.git
+bench get-app ury_mosaic https://github.com/ury-erp/mosaic.git --branch Aggregator
 bench --site dev.altrixone install-app ury_mosaic
